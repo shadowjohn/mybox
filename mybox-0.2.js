@@ -27,7 +27,15 @@
         {                    
           default_opts[key] = opts[key];
         }
-      }   
+      } 
+      orin_opts = {
+        'html_overflow':(typeof($("html").css('overflow'))=='undefined')?'hidden':$("html").css('overflow'),
+        'html_padding':(typeof($("html").css('padding'))=='undefined')?'0px':$("html").css('padding'),
+        'html_margin':(typeof($("html").css('margin'))=='undefined')?'0px':$("html").css('margin'),
+        'body_overflow':(typeof($("body").css('overflow'))=='undefined')?'auto':$("body").css('overflow'),
+        'body_padding':(typeof($("body").css('padding'))=='undefined')?'0px':$("body").css('padding'),
+        'body_margin':(typeof($("body").css('margin'))=='undefined')?'0px':$("body").css('margin') 
+      }        
     }   
     function run(opts)
     {
@@ -49,8 +57,8 @@
          'height':$(window).height()+'px',
          'background-color':default_opts.mybox_background_css.background_Color,
          'opacity':default_opts.mybox_background_css.background_Opacity,
-         'left':'0px',
-         'top':'0px',
+         'left':parseInt($(window).scrollLeft())+'px',
+         'top':parseInt($(window).scrollTop())+'px',
          'display':'none'
       });
       $("#"+default_opts.mybox_background_id).show();                
@@ -101,8 +109,8 @@
     function div_center()
     {             
       $("#"+default_opts.mybox_div_id).css({
-        'left':(($(window).width()-$("#"+default_opts.mybox_div_id).outerWidth())/2)+'px',
-        'top':(($(window).height()-$("#"+default_opts.mybox_div_id).outerHeight())/2)+'px'
+        'left':((($(window).width()-$("#"+default_opts.mybox_div_id).outerWidth())/2) + $(window).scrollLeft())+'px',
+        'top':((($(window).height()-$("#"+default_opts.mybox_div_id).outerHeight())/2)+ $(window).scrollTop()) +'px'
       });
     }
     function remove()
@@ -114,11 +122,11 @@
         'margin':orin_opts.body_margin
       });
       
-      /*$("html").css({
+      $("html").css({
         'overflow':orin_opts.html_overflow,
         'padding':orin_opts.html_padding,
         'margin':orin_opts.html_margin
-      });*/      
+      });      
       $("#"+default_opts.mybox_div_id).hide();
       $("#"+default_opts.mybox_div_id).remove();
       $("#"+default_opts.mybox_background_id).hide();
@@ -126,14 +134,7 @@
       $(window).unbind("resize",resize_func);    
     }    
     //var baseZindex = 100000;    
-    var orin_opts = {
-      /*'html_overflow':(typeof($("html").css('overflow'))=='undefined')?'hidden':$("html").css('overflow'),
-      'html_padding':(typeof($("html").css('padding'))=='undefined')?'0px':$("html").css('padding'),
-      'html_margin':(typeof($("html").css('margin'))=='undefined')?'0px':$("html").css('margin'),*/
-      'body_overflow':(typeof($("body").css('overflow'))=='undefined')?'auto':$("body").css('overflow'),
-      'body_padding':(typeof($("body").css('padding'))=='undefined')?'0px':$("body").css('padding'),
-      'body_margin':(typeof($("body").css('margin'))=='undefined')?'0px':$("body").css('margin') 
-    }
+    var orin_opts = {};
     var default_opts = {
       is_background_touch_close : false,  
       is_block : false,   
