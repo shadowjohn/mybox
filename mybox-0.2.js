@@ -44,7 +44,7 @@
       $("body").append("<div id='"+default_opts.mybox_background_id+"'></div>");
       $("#"+default_opts.mybox_background_id).css({
          'position':'absolute',
-         'z-index':baseZindex,
+         'z-index':parseInt(new Date().getTime()/1000),
          'width':$(window).width()+'px',
          'height':$(window).height()+'px',
          'background-color':default_opts.mybox_background_css.background_Color,
@@ -68,7 +68,7 @@
       $("#"+default_opts.mybox_div_id).html(default_opts.message);
       $("#"+default_opts.mybox_div_id).css({
          'position':'absolute',
-         'z-index':(baseZindex+1),
+         'z-index':(parseInt(new Date().getTime()/1000)+1),
          'display':'none'
       });
       for(key in default_opts.css)
@@ -125,7 +125,7 @@
       $("#"+default_opts.mybox_background_id).remove();
       $(window).unbind("resize",resize_func);    
     }    
-    var baseZindex = 100000;    
+    //var baseZindex = 100000;    
     var orin_opts = {
       /*'html_overflow':(typeof($("html").css('overflow'))=='undefined')?'hidden':$("html").css('overflow'),
       'html_padding':(typeof($("html").css('padding'))=='undefined')?'0px':$("html").css('padding'),
