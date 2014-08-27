@@ -184,7 +184,11 @@ mybox
   </tbody></table>
   <h2 class="title">ChangeLog</h2>
   <div style="text-align:left;">
-    <pre style="margin-left:20px;">* Thu Feb 20 2014 Feather Mountain &lt;http://3wa.tw&gt; 0.1
+    <pre style="margin-left:20px;">
+* Wed Aug 27 2014 Feather Mountain &lt;http://3wa.tw&gt; 0.2
+- Fixed screen center.
+
+* Thu Feb 20 2014 Feather Mountain &lt;http://3wa.tw&gt; 0.1
 - Building on first time. 
     </pre>
   </div>

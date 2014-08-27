@@ -109,8 +109,8 @@
     function div_center()
     {             
       $("#"+default_opts.mybox_div_id).css({
-        'left':((($(window).width()-$("#"+default_opts.mybox_div_id).outerWidth())/2) + $(window).scrollLeft())+'px',
-        'top':((($(window).height()-$("#"+default_opts.mybox_div_id).outerHeight())/2)+ $(window).scrollTop()) +'px'
+        'left':((($(window).width()-$("#"+default_opts.mybox_div_id).outerWidth())/2))+'px',
+        'top':(($(window).height()-$("#"+default_opts.mybox_div_id).outerHeight())/2) +'px'
       });
     }
     function remove()
