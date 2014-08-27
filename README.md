@@ -186,7 +186,7 @@ mybox
   <div style="text-align:left;">
     <pre style="margin-left:20px;">
 * Wed Aug 27 2014 Feather Mountain &lt;http://3wa.tw&gt; 0.2
-- Fixed screen center.
+- Fixed screen center issue.
 
 * Thu Feb 20 2014 Feather Mountain &lt;http://3wa.tw&gt; 0.1
 - Building on first time. 
