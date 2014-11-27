@@ -185,6 +185,9 @@ mybox
   <h2 class="title">ChangeLog</h2>
   <div style="text-align:left;">
     <pre style="margin-left:20px;">
+* Thu Nov 27 2014 Feather Mountain &lt;http://3wa.tw&gt; 0.3
+- Fixed screen scroll issue.
+    
 * Wed Aug 27 2014 Feather Mountain &lt;http://3wa.tw&gt; 0.2
 - Fixed screen center issue.
 
