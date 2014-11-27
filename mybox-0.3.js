@@ -1,6 +1,6 @@
 /*!
  * jQuery mybox plugin
- * Version .01 (20-Feb-2014)
+ * Version .03 (27-Nov-2014)
  * @requires jQuery v1.2.3 or later
  *
  * Examples at: http://3wa.tw/demo/htm/mybox
@@ -88,7 +88,7 @@
       $("body").append("<div id='"+default_opts.mybox_div_id+"'></div>");
       $("#"+default_opts.mybox_div_id).html(default_opts.message);
       $("#"+default_opts.mybox_div_id).css({
-         'position':'absolute',
+         'position':'fixed',
          'z-index':(parseInt(new Date().getTime()/1000)+1),
          'display':'none'
       });
