@@ -35,10 +35,10 @@ mybox
     <br>  
     Donwload：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.3.js">mybox-0.3.js</a> 87845688a2b7858b36e2f99771006c25
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.4.js">mybox-0.4.js</a> ea58a968c6c85232043125c964ec2922
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.3.min.js">mybox-0.3.min.js</a> 4a196965e8ef0cc03eb02bb0f21de623
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.4.min.js">mybox-0.4.min.js</a> 8a2393d737fe82271a68fa10f7e87c8a
     <br>        
     Key Word：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -185,6 +185,9 @@ mybox
   <h2 class="title">ChangeLog</h2>
   <div style="text-align:left;">
     <pre style="margin-left:20px;">
+* Tue Jun 23 2015 Feather Mountain &lt;http://3wa.tw&gt; 0.4
+- Fixed contents.
+    
 * Thu Nov 27 2014 Feather Mountain &lt;http://3wa.tw&gt; 0.3
 - Fixed screen scroll issue.
     
