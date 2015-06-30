@@ -35,10 +35,10 @@ mybox
     <br>  
     Donwload：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.4.js">mybox-0.4.js</a> ea58a968c6c85232043125c964ec2922
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.5.js">mybox-0.5.js</a> 56390844cae454ea94eeea0f5421ee63
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.4.min.js">mybox-0.4.min.js</a> 8a2393d737fe82271a68fa10f7e87c8a
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.5.min.js">mybox-0.5.min.js</a> ff5cd2061189418191b3c23de9f41fbc
     <br>        
     Key Word：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -98,7 +98,18 @@ mybox
         <br>
         或是        &lt;input type='button' value='關閉' onClick="$.unmybox();"&gt;   
         </div>
-    </td></tr><tr>
+    </td>
+    </tr>
+    <tr>
+      <th>方法</th>
+      <td><h3>$.mybox_isOpen()</h3></td>
+      <td>
+        <div class="comments">
+          用來檢查光箱是否正在使用，回傳 true or false          
+        </div>
+      </td>
+    </tr>     
+    <tr>
       <th>參數</th>
       <td>
         <h3>is_background_touch_close</h3>
@@ -167,7 +178,7 @@ mybox
           </pre>          
         </div>
       </td>
-    </tr> 
+    </tr>
     <tr>
       <th>方法</th>
       <td><h3>unBlock</h3></td>
@@ -185,6 +196,9 @@ mybox
   <h2 class="title">ChangeLog</h2>
   <div style="text-align:left;">
     <pre style="margin-left:20px;">
+* Tue Jun 30 2015 Feather Mountain &lt;http://3wa.tw&gt; 0.5
+- Add $.mybox_isOpen().
+
 * Tue Jun 23 2015 Feather Mountain &lt;http://3wa.tw&gt; 0.4
 - Fixed contents.
     
