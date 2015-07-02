@@ -35,10 +35,10 @@ mybox
     <br>  
     Donwload：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.5.js">mybox-0.5.js</a> 56390844cae454ea94eeea0f5421ee63
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.6.js">mybox-0.6.js</a> e6a81fe1918c18c69585dcd428bb6e1b
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.5.min.js">mybox-0.5.min.js</a> ff5cd2061189418191b3c23de9f41fbc
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.6.min.js">mybox-0.6.min.js</a> e15141506261be65112a5fd73188f585
     <br>        
     Key Word：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
