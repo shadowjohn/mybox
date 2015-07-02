@@ -196,6 +196,9 @@ mybox
   <h2 class="title">ChangeLog</h2>
   <div style="text-align:left;">
     <pre style="margin-left:20px;">
+* Thu Jul 02 2015 Feather Mountain &lt;http://3wa.tw&gt; 0.6
+- Remove jQuery version check in setup.
+
 * Tue Jun 30 2015 Feather Mountain &lt;http://3wa.tw&gt; 0.5
 - Add $.mybox_isOpen().
 
