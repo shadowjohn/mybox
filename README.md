@@ -35,10 +35,10 @@ mybox
     <br>  
     Donwload：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.6.js">mybox-0.6.js</a> e6a81fe1918c18c69585dcd428bb6e1b
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.7.js">mybox-0.7.js</a> 66abd7f2f235b4e2326763fe1ec608b5
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.6.min.js">mybox-0.6.min.js</a> e15141506261be65112a5fd73188f585
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.7.min.js">mybox-0.7.min.js</a> cf00698cb305a1c056bde2b3f384b3e9
     <br>        
     Key Word：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -196,6 +196,9 @@ mybox
   <h2 class="title">ChangeLog</h2>
   <div style="text-align:left;">
     <pre style="margin-left:20px;">
+* Sun Aug 02 2015 Feather Mountain &lt;http://3wa.tw&gt; 0.7
+- Fix window scrollTop after unmybox.
+
 * Thu Jul 02 2015 Feather Mountain &lt;http://3wa.tw&gt; 0.6
 - Remove jQuery version check in setup.
 
