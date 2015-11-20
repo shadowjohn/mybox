@@ -35,10 +35,10 @@ mybox
     <br>  
     Donwload：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.7.js">mybox-0.7.js</a> 66abd7f2f235b4e2326763fe1ec608b5
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.8.js">mybox-0.8.js</a> 1ed017630bc04749835759525a7ae940
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.7.min.js">mybox-0.7.min.js</a> cf00698cb305a1c056bde2b3f384b3e9
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.8.min.js">mybox-0.8.min.js</a> b7d6d74e3fc2140435aabca5390977aa
     <br>        
     Key Word：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -196,6 +196,9 @@ mybox
   <h2 class="title">ChangeLog</h2>
   <div style="text-align:left;">
     <pre style="margin-left:20px;">
+* Fri Nov 20 2015 Feather Mountain &lt;http://3wa.tw&gt; 0.8
+- Fix window scrollTop after unmybox when is_background_touch_close equals true.
+    
 * Sun Aug 02 2015 Feather Mountain &lt;http://3wa.tw&gt; 0.7
 - Fix window scrollTop after unmybox.
 
