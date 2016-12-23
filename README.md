@@ -35,10 +35,10 @@ mybox
     <br>  
     Donwload：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.8.js">mybox-0.8.js</a> 1ed017630bc04749835759525a7ae940
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.9.js">mybox-0.9.js</a> 0785742ec97b2dbe2292481436c59a88
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.8.min.js">mybox-0.8.min.js</a> b7d6d74e3fc2140435aabca5390977aa
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.9.min.js">mybox-0.9.min.js</a> 14c33ed5f78530da553c18e5de77c6b3
     <br>        
     Key Word：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -196,7 +196,7 @@ mybox
   <h2 class="title">ChangeLog</h2>
   <div style="text-align:left;">
     <pre style="margin-left:20px;">
-* Sat Dec 20 2016 Feather Mountain &lt;http://3wa.tw&gt; 0.9
+* Sat Dec 24 2016 Feather Mountain &lt;http://3wa.tw&gt; 0.9
 - Limit mybox width and height the window screen size 90%.
     
 * Fri Nov 20 2015 Feather Mountain &lt;http://3wa.tw&gt; 0.8
