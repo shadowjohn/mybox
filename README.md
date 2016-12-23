@@ -196,6 +196,9 @@ mybox
   <h2 class="title">ChangeLog</h2>
   <div style="text-align:left;">
     <pre style="margin-left:20px;">
+* Sat Dec 20 2016 Feather Mountain &lt;http://3wa.tw&gt; 0.9
+- Limit mybox width and height the window screen size 90%.
+    
 * Fri Nov 20 2015 Feather Mountain &lt;http://3wa.tw&gt; 0.8
 - Fix window scrollTop after unmybox when is_background_touch_close equals true.
     
