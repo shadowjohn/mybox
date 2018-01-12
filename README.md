@@ -35,11 +35,14 @@ mybox
     <br>  
     Donwload：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.9.js">mybox-0.9.js</a> 0785742ec97b2dbe2292481436c59a88
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.11.js">mybox-0.11.js</a> 8586c612890c59191cad855017516a4e
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.9.min.js">mybox-0.9.min.js</a> 14c33ed5f78530da553c18e5de77c6b3
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.11.min.js">mybox-0.11.min.js</a> 93c18214cebe4fc9d0a6511e6419623b
     <br>        
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-lastest.min.js">mybox-lastest.min.js</a> 93c18214cebe4fc9d0a6511e6419623b
+    <br>    
     Key Word：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Colorbox, Fancybox, Thinkbox, BlockUI
@@ -196,6 +199,13 @@ mybox
   <h2 class="title">ChangeLog</h2>
   <div style="text-align:left;">
     <pre style="margin-left:20px;">
+* Fri Jan 12 2018 Feather Mountain &lt;http://3wa.tw&gt; 0.11
+- Upgrade for jQuery 3.2.1 support.
+- Fix dom.size() to dom.length
+ 
+* Mon Mar 13 2017 Feather Mountain &lt;http://3wa.tw&gt; 0.10
+- Fix scroll position.
+   
 * Sat Dec 24 2016 Feather Mountain &lt;http://3wa.tw&gt; 0.9
 - Limit mybox width and height the window screen size 90%.
     

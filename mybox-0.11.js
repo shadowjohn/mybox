@@ -1,57 +1,69 @@
 /*!
  * jQuery mybox plugin
- * Version .01 (20-Feb-2014)
+ * Version 0.11 (12-Jan-2018)
  * @requires jQuery v1.2.3 or later
  *
  * Examples at: http://3wa.tw/demo/htm/mybox
- * Copyright (c) 2014-2016 Feather Mountain (http://3wa.tw)
+ * Copyright (c) 2014-2017 Feather Mountain (http://3wa.tw)
  * Dual licensed under the MIT and GPL licenses:
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.gnu.org/licenses/gpl.html
  *
- * Thanks to jQuery-BlockUI
+ * Special thanks to jQuery-BlockUI
  */  
   ;(function() {
-  	function setup($) {
-  		if (/1\.(0|1|2)\.(0|1|2)/.test($.fn.jquery) || /^1.1/.test($.fn.jquery)) {
-  			alert('blockUI requires jQuery v1.2.3 or later!  You are using v' + $.fn.jquery);
-  			return;
-  		}
+    var _scrollTop="";
+    function setup($) {
     }       
     function time(){return Math.floor(new Date().getTime()/1000);}
     function init(opts)
     {
+      _scrollTop=$(window).scrollTop();
+      //alert(_scrollTop);
       for(var key in default_opts)
       {        
         if(typeof(opts[key]) != "undefined")
         {                    
           default_opts[key] = opts[key];
         }
-      } 
+      }       
       orin_opts = {
-        'html_overflow':(typeof($("html").css('overflow'))=='undefined')?'hidden':$("html").css('overflow'),
-        'html_padding':(typeof($("html").css('padding'))=='undefined')?'0px':$("html").css('padding'),
-        'html_margin':(typeof($("html").css('margin'))=='undefined')?'0px':$("html").css('margin'),
-        'body_overflow':(typeof($("body").css('overflow'))=='undefined')?'auto':$("body").css('overflow'),
-        'body_padding':(typeof($("body").css('padding'))=='undefined')?'0px':$("body").css('padding'),
-        'body_margin':(typeof($("body").css('margin'))=='undefined')?'0px':$("body").css('margin') 
-      }        
+        //'html_overflow':(typeof($("html").css('overflow'))=='undefined')?'auto':$("html").css('overflow'),
+        //'html_padding':(typeof($("html").css('padding'))=='undefined')?'0px':$("html").css('padding'),
+        //'html_margin':(typeof($("html").css('margin'))=='undefined')?'0px':$("html").css('margin'),
+        //'body_overflow':(typeof($("body").css('overflow'))=='undefined')?'auto':$("body").css('overflow'),
+        //'body_padding':(typeof($("body").css('padding'))=='undefined')?'0px':$("body").css('padding'),
+        //'body_margin':(typeof($("body").css('margin'))=='undefined')?'0px':$("body").css('margin') 
+      }
+      if($("#mybox_class_define").length==0)
+      {
+        $("body").append(" \
+        <div style='display:none;position:absolute;' id='mybox_class_define'> \
+          <style> \
+            .mybox_block_noscroll{ \
+              position: fixed; \
+              overflow-y: scroll; \
+              width:100%; \
+            } \
+          </style> \
+        </div>");
+      }       
+      $("body").addClass("mybox_block_noscroll");        
     }   
     function run(opts)
     {
                     
-      $("html,body").css({
+      /*$("html,body").css({
         'overflow':'hidden',
         'padding':'0px',
         'margin':'0px'
-      });
-            
+      });*/     
       $("#"+default_opts.mybox_background_id).remove();
       $("#"+default_opts.mybox_div_id).remove();                                
       //background
       $("body").append("<div id='"+default_opts.mybox_background_id+"'></div>");
       $("#"+default_opts.mybox_background_id).css({
-         'position':'absolute',
+         'position':'fixed',
          'z-index':parseInt(new Date().getTime()/1000),
          'width':$(window).width()+'px',
          'height':$(window).height()+'px',
@@ -67,7 +79,7 @@
       if(default_opts.is_background_touch_close)
       {
         $("#"+default_opts.mybox_background_id).click(function(){
-          remove();
+          $.unmybox();
         });
       }
       
@@ -75,8 +87,11 @@
       $("body").append("<div id='"+default_opts.mybox_div_id+"'></div>");
       $("#"+default_opts.mybox_div_id).html(default_opts.message);
       $("#"+default_opts.mybox_div_id).css({
-         'position':'absolute',
+         'position':'fixed',
          'z-index':(parseInt(new Date().getTime()/1000)+1),
+         'max-width':($(window).width()*90/100)+'px',
+         'max-height':($(window).height()*90/100)+'px',
+         'overflow':'auto',
          'display':'none'
       });
       for(key in default_opts.css)
@@ -84,12 +99,21 @@
         $("#"+default_opts.mybox_div_id).css(key,default_opts.css[key]);      
       }                                                      
       //Center           
-      $("#"+default_opts.mybox_div_id).show();
+      $("#"+default_opts.mybox_div_id).css({
+        'display':'inline',
+        'opacity':0.01
+      });
       default_opts.is_block = true;
       $("#"+default_opts.mybox_div_id+" img").bind('load',function(){
-        div_center()
+        div_center();
+        $("#"+default_opts.mybox_div_id).css({
+          'opacity':1
+        });
       });
-      div_center();   
+      div_center();
+      $("#"+default_opts.mybox_div_id).css({
+          'opacity':1
+      });   
       $(window).bind("resize",resize_func);   
     }
     var resize_func = function(){
@@ -97,7 +121,7 @@
       {
         //resizebackground and recenter              
         $("#"+default_opts.mybox_background_id).css({
-         'position':'absolute',         
+         'position':'fixed',         
          'width':$(window).width()+'px',
          'height':$(window).height()+'px',         
          'left':'0px',
@@ -116,7 +140,7 @@
     function remove()
     {
       default_opts.is_block = false;      
-      $("body").css({
+      /*$("body").css({
         'overflow':orin_opts.body_overflow,
         'padding':orin_opts.body_padding,
         'margin':orin_opts.body_margin
@@ -126,12 +150,15 @@
         'overflow':orin_opts.html_overflow,
         'padding':orin_opts.html_padding,
         'margin':orin_opts.html_margin
-      });      
+      });*/
+      $("body").removeClass("mybox_block_noscroll");      
       $("#"+default_opts.mybox_div_id).hide();
       $("#"+default_opts.mybox_div_id).remove();
       $("#"+default_opts.mybox_background_id).hide();
       $("#"+default_opts.mybox_background_id).remove();
-      $(window).unbind("resize",resize_func);    
+      
+      $(window).unbind("resize",resize_func);          
+      $(window).scrollTop(_scrollTop);
     }    
     //var baseZindex = 100000;    
     var orin_opts = {};
@@ -163,10 +190,13 @@
     $.mybox_center = function(){
       div_center();
     };
+    $.mybox_isOpen = function (){
+      return default_opts.is_block;
+    }
     $.unmybox = function() 
     { 
-      remove();
-      default_opts.unBlock();  
+      remove();      
+      default_opts.unBlock();        
     };
         
   	if (typeof define === 'function' && define.amd && define.amd.jQuery) {
