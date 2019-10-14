@@ -35,13 +35,13 @@ mybox
     <br>  
     Donwload：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.11.js">mybox-0.11.js</a> 8586c612890c59191cad855017516a4e
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.12.js">mybox-0.12.js</a> addc39155cf4e53d0cb1bfdbfbd98ae6
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.11.min.js">mybox-0.11.min.js</a> 93c18214cebe4fc9d0a6511e6419623b
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-0.12.min.js">mybox-0.12.min.js</a> 1712246b9e828403dda3bf1f68d0ad08
     <br>        
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-lastest.min.js">mybox-lastest.min.js</a> 93c18214cebe4fc9d0a6511e6419623b
+    <a target="_blank" href="http://3wa.tw/inc/javascript/jquery/mybox/mybox-lastest.min.js">mybox-lastest.min.js</a> 1712246b9e828403dda3bf1f68d0ad08
     <br>    
     Key Word：<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -199,6 +199,10 @@ mybox
   <h2 class="title">ChangeLog</h2>
   <div style="text-align:left;">
     <pre style="margin-left:20px;">
+* Fri Jan 12 2018 Feather Mountain &lt;http://3wa.tw&gt; 0.12
+- Fix fullscreen scrollTop position
+- Fix redefined beforeBlock, onblock, unBlock event issue. 
+ 
 * Fri Jan 12 2018 Feather Mountain &lt;http://3wa.tw&gt; 0.11
 - Upgrade for jQuery 3.2.1 support.
 - Fix dom.size() to dom.length

@@ -1,6 +1,6 @@
 /*!
  * jQuery mybox plugin
- * Version 0.11 (12-Jan-2018)
+ * Version 0.12 (14-Oct-2019)
  * @requires jQuery v1.2.3 or later
  *
  * Examples at: http://3wa.tw/demo/htm/mybox
@@ -35,20 +35,22 @@
         //'body_padding':(typeof($("body").css('padding'))=='undefined')?'0px':$("body").css('padding'),
         //'body_margin':(typeof($("body").css('margin'))=='undefined')?'0px':$("body").css('margin') 
       }
-      if($("#mybox_class_define").length==0)
-      {
-        $("body").append(" \
-        <div style='display:none;position:absolute;' id='mybox_class_define'> \
-          <style> \
-            .mybox_block_noscroll{ \
-              position: fixed; \
-              overflow-y: scroll; \
-              width:100%; \
-            } \
-          </style> \
-        </div>");
-      }       
-      $("body").addClass("mybox_block_noscroll");        
+      //alert();
+//       if($("#mybox_class_define").length==0)
+//       {        
+//         $("body").append(" \
+//         <div style='display:none;position:absolute;' id='mybox_class_define'> \
+//           <style> \
+//             .mybox_block_noscroll{ \
+//               position: fixed; \
+//               overflow-y: scroll; \
+//               width:100%; \
+//               top:"+$(window).scrollTop()+"px \
+//             } \
+//           </style> \
+//         </div>");
+//       }       
+//       $("body").addClass("mybox_block_noscroll");        
     }   
     function run(opts)
     {
@@ -57,11 +59,12 @@
         'overflow':'hidden',
         'padding':'0px',
         'margin':'0px'
-      });*/     
+      });*/           
+      
       $("#"+default_opts.mybox_background_id).remove();
       $("#"+default_opts.mybox_div_id).remove();                                
       //background
-      $("body").append("<div id='"+default_opts.mybox_background_id+"'></div>");
+      $("body").append("<div id='"+default_opts.mybox_background_id+"'></div>");      
       $("#"+default_opts.mybox_background_id).css({
          'position':'fixed',
          'z-index':parseInt(new Date().getTime()/1000),
@@ -70,7 +73,7 @@
          'background-color':default_opts.mybox_background_css.background_Color,
          'opacity':default_opts.mybox_background_css.background_Opacity,
          'left':parseInt($(window).scrollLeft())+'px',
-         'top':parseInt($(window).scrollTop())+'px',
+         'top':'0px',
          'display':'none'
       });
       $("#"+default_opts.mybox_background_id).show();                
@@ -125,7 +128,8 @@
          'width':$(window).width()+'px',
          'height':$(window).height()+'px',         
          'left':'0px',
-         'top':'0px'
+         'top':'0px',
+         'pointer-events':'fill'
         });
         div_center();
       }
@@ -151,7 +155,7 @@
         'padding':orin_opts.html_padding,
         'margin':orin_opts.html_margin
       });*/
-      $("body").removeClass("mybox_block_noscroll");      
+      //$("body").removeClass("mybox_block_noscroll");      
       $("#"+default_opts.mybox_div_id).hide();
       $("#"+default_opts.mybox_div_id).remove();
       $("#"+default_opts.mybox_background_id).hide();
@@ -181,8 +185,12 @@
       onBlock:function(){},
       unBlock:function(){}      
     };
-    $.mybox = function(opts) { 
-      init(opts);
+    $.mybox = function(opts) {
+      //preset
+      default_opts.beforeBlock=function(){};
+      default_opts.onBlock=function(){};      
+      default_opts.unBlock=function(){}; 
+      init(opts);            
       default_opts.beforeBlock();      
       run(opts); 
       default_opts.onBlock();
