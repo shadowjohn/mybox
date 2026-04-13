@@ -258,7 +258,7 @@ unBlock: function () {
 
 ### 專案資訊
 
-- Author: Feather Mountain (3WA)
+- Author: 羽山秋人 (https://3wa.tw)
 - Demo: https://3wa.tw/demo/htm/mybox/
 - GitHub: https://github.com/shadowjohn/mybox
 - License: MIT / GPL dual license
